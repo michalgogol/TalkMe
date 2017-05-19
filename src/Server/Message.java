@@ -5,10 +5,12 @@ import java.io.Serializable;
 
 public class Message implements Serializable {
 
+    private static final long serialVersionUID =12358903454875L;
     private String message;
     private String recipientName;
     private String senderName;
     private String type;
+    private String[] onlineUsers;
 
     public String getSenderName() {
         return senderName;
@@ -40,5 +42,14 @@ public class Message implements Serializable {
 
     public String getRecipientName() {
         return recipientName;
+    }
+
+    public String[] getOnlineUsers() {
+
+        return onlineUsers;
+    }
+
+    public void setOnlineUsers(String[] onlineUsers) {
+        this.onlineUsers = onlineUsers;
     }
 }
